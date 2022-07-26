@@ -131,6 +131,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,10 +143,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Message.h" />
+    <ClInclude Include="Profile.h" />
+    <ClInclude Include="ProfileInit.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Message.cpp" />
+    <ClCompile Include="Profile.cpp" />
+    <ClCompile Include="ProfileInit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

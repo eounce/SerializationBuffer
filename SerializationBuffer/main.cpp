@@ -6,11 +6,11 @@
 
 int wmain()
 {
-	int num1 = 10;
-	float flo1 = 20.2f;
-	double dou1 = 20.3;
-	WCHAR ch1 = L'a';
-	int a1 = 2020;
+	int num1;
+	float flo1;
+	double dou1;
+	WCHAR ch1;
+	int a1;
 
 	int num2;
 	float flo2;
@@ -21,6 +21,12 @@ int wmain()
 	int count = 10000000;
 	while (count--)
 	{
+		num1 = rand() % 100 + 1;
+		flo1 = rand() % 100 / 2.5f;
+		dou1 = rand() % 100 / 3.2f;
+		ch1 = rand() % 255;
+		a1 = rand() % 1000 + 1;
+
 		Message msg;
 		msg << num1;
 		msg << dou1;
@@ -42,5 +48,6 @@ int wmain()
 			break;
 		}
 	}
+
 	return 0;
 }
